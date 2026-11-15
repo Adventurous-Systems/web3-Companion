@@ -1,111 +1,130 @@
+## Syllabus
 
-## Indicative Content
+_Last reviewed: November 2026. Section names match the headings in the [companion](index.md)._
+
+### Indicative content
 
 * Setting up a development environment
-  - Operating system (Linux, MacOsX, Windows)
-  - Ethereu Nodes
-  - Git & Git clients
-  - Editors and IDEs
+  - Operating system (Linux, macOS, Windows with WSL)
+  - Node.js, Git and Git clients
+  - Editors and IDEs (Remix, VS Code)
+  - RPC providers and node access
 
-* Review of Blockchain Technologies
-
-  - Blockchain Context
-  - Distributed ledgers & DLT platforms
-  - Consensus Mechanisms
-  - Transactions and Blocks
+* Review of blockchain technologies
+  - Blockchain context and the Byzantine Generals' Problem
+  - Distributed ledgers and DLT platforms
+  - Consensus mechanisms (proof of work, proof of stake)
+  - Transactions and blocks
   - Mining and staking
-  - Network Peer Dsicovery and messaging
+  - Network peer discovery and messaging
 
-* Blockchain Basics
-  - Cryptography & merkle trees
+* Blockchain basics
+  - Cryptography, hash functions and Merkle trees
+  - Public key and elliptic curve cryptography
   - Blockchain structure
   - Smart contracts
   - Blockchain nodes
   - Forks
 
-* Ethereum Primitives
-  - History
-  - White Paper & Yellow Paper
-  - Blocks
-  - EVM - Ethereum Virtual machine
-  - Elliptic curve cryptography
-  - MainNet and Testnet
-  - Etherscan
-  - Ethereum 2.0
+* Ethereum primitives
+  - History, white paper and yellow paper
+  - Accounts (EOAs, contract accounts, EIP-7702 smart accounts)
+  - Transactions, gas and fees
+  - Blocks and the EVM
+  - Execution and consensus clients
 
-* Development Frameworks
-  - Foundry
-  - Setting up Foundry
-  - Hardhat
-  - Setting uo HardHat
-  - Brownie (for Pythonistas)
-  - Setting up Brownie
+* Networks, testnets and explorers
+  - Mainnet, Sepolia and Hoodi; layer 2 testnets
+  - Local networks (Anvil, Hardhat network)
+  - Etherscan, Blockscout and contract verification
 
-* Solidity Fundamentals
-  - Basic Layout and structure of a smart contract
+* The Ethereum roadmap and network upgrades
+  - The Merge, Dencun, Pectra, Fusaka and Glamsterdam
+  - How upgrades are decided (EIPs, All Core Developers calls)
+
+* Development frameworks
+  - Foundry: setting up, `forge`, `cast`, `anvil`
+  - Hardhat 3: setting up, Solidity and TypeScript tests
+  - Ape Framework (for Pythonistas)
+  - Scaffold-ETH 2
+
+* Solidity fundamentals
+  - Basic layout and structure of a smart contract
   - Data types and variables
-  - Functions
-  - Storage and memory
-  - Reading Smart contracts
+  - Functions, modifiers and custom errors
+  - Storage, memory and transient storage
+  - Reading smart contracts
   - Smart contract Application Binary Interface (ABI)
-  - Events and Logs
-  - Factory contracts
+  - Events and logs
+  - Factory contracts and CREATE2
 
-* Writing Smart Contracts
-  - Basic Smart contracts
-  - Intercontract execution
+* Writing smart contracts
+  - Basic smart contracts
+  - Inter-contract execution
   - Inheritance
-  - Libraries and the Ethereum Package manager
-  - Smart Contract System Design
-  - Examples I: Proof of Existence, Simple Bank, Supply Chains
-  - Examples II: Voting, tokens
-
-
+  - Libraries (OpenZeppelin, Solady)
+  - Upgradeable contracts and proxies
+  - Smart contract system design
+  - Examples I: proof of existence, simple bank, supply chains
+  - Examples II: voting, tokens, auctions
 
 * Token standards
   - What is an EIP and an ERC?
-  - ERC20, 721 Examples
-  - ERC20, 721, 777 walkthroughs
+  - ERC-20, ERC-721 and ERC-1155 walkthroughs
+  - ERC-4626, ERC-2612 and signature standards (EIP-712, ERC-1271)
+  - Account abstraction (ERC-4337, EIP-7702)
 
-* Solidity Smart contract libraries and Design Patterns
-
-* Ethereum and the End user
-  - web3.0 Introduction
-  - Web3.0 packages: ether.js / Web3.js / web3.py
-  - Web3.js to a contracts
-  - metamask
-  - Integrating with react
-
-
-* Templates for Creating Dapps
-
-
-* Testing Debugging Smart contracts
+* Testing, debugging and security
   - Why test?
-  - Testing examples
-  - What do we avoid with a good testing suite - Quality Control
-  - Solidity tests
-  - Javascript tests
-  - Typescript tests
+  - Unit, fuzz and invariant tests in Solidity (Foundry, Hardhat 3)
+  - TypeScript tests (Hardhat 3, viem)
+  - What a good test suite avoids: quality control
+  - Common exploits: re-entrancy, tx.origin, denial of service, front running
+  - Static analysis and fuzzing (Slither, Aderyn, Echidna, Medusa)
+  - Security checklists (EthTrust Security Levels)
+  - Gas optimisation
+
+* Ethereum and the end user
+  - Web3 introduction
+  - viem, wagmi, ethers v6 and web3.py
+  - Wallets and wallet connection (MetaMask, Safe, RainbowKit)
+  - Integrating with React and Scaffold-ETH 2
 
 Further afield:
-* Decentralised Finance
-* Decentralised Autonomous Organisations
-* Interplanetary FileSystem
-* The Graph
-* Oracles
+* Layer 2 and scaling (rollups, blobs, L2BEAT)
+* Storage (IPFS, Filecoin, Arweave), ENS, indexing (The Graph) and oracles (Chainlink)
+* Attestations (EAS)
+* Decentralised finance
+* Decentralised autonomous organisations and token engineering
+* AI agents and Ethereum (ERC-8004, x402)
+* Blockchain in architecture, engineering and construction
 
-## Learning outcomes:
+### Suggested 12-week schedule
 
-By Following the Companion, learners will be able to show evidence of:
+| Week | Focus | Companion sections | Hands-on |
+| --- | --- | --- | --- |
+| 1 | Environment and context | Setting up a development environment; Review of blockchain technologies | Install Node.js, Git, Foundry or Hardhat 3; deploy "Hello World" in Remix |
+| 2 | Blockchain basics | Blockchain basics | Build a toy blockchain in Python or JavaScript; hash and Merkle tree exercises |
+| 3 | Ethereum primitives | Ethereum primitives; Networks, testnets and explorers; The Ethereum roadmap | Fund a Sepolia account; read a transaction on Etherscan; use `cast` to query mainnet |
+| 4 | Solidity I | Solidity fundamentals | Solidity by Example exercises; first Speedrun Ethereum challenge |
+| 5 | Solidity II and testing | Writing smart contracts; Testing, debugging and security | Simple bank with unit and fuzz tests |
+| 6 | Tokens | Token standards and EIPs | ERC-20 and ERC-721 with OpenZeppelin; deploy and verify on Sepolia |
+| 7 | Front end | Ethereum and the end user | Scaffold-ETH 2 or viem/wagmi front end for your token |
+| 8 | Security | Testing, debugging and security | Ethernaut levels; run Slither or Aderyn on your own code |
+| 9 | Further afield and project proposal | Layer 2; Storage, naming, indexing and oracles; DAOs; AEC | Submit a one-page project proposal |
+| 10 | Project build | Project Brief | Contracts and tests |
+| 11 | Project build | Project Brief | Front end, testnet deployment, security self-review |
+| 12 | Project showcase | Project Brief | Report, demo video and presentation |
 
-'''
+### Learning outcomes
 
-* Describe Blockchain primitives and basics and give examples for their usage.
-* Prepare and demonstrate setting up a development environment for Ethereum.
-* Compose basic Smart contracts and their tests and deploy them in a test environment.
-* Produce an evaluation of common security issues in smart contracts.
-* Build, Deploy and showcase a decentralised application on Ethereum. '''
+By following the companion, learners will be able to show evidence of:
 
-- Indicative Workload: Minimum 10 hours per week, with at least 4 hours per week hands-on practice.
-- Recommended Workload: 20 hours per week, with 10 hours per week devoted to hands-on practice.
+1. Describing blockchain primitives and basics and giving examples of their use.
+2. Preparing and demonstrating a development environment for Ethereum.
+3. Composing basic smart contracts and their tests, and deploying them to a test network.
+4. Producing an evaluation of common security issues in smart contracts.
+5. Building, deploying and showcasing a decentralised application on Ethereum or an Ethereum layer 2.
+
+- Indicative workload: minimum 10 hours per week, with at least 4 hours per week of hands-on practice.
+- Recommended workload: 20 hours per week, with 10 hours per week devoted to hands-on practice.

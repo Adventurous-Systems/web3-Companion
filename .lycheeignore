@@ -1,0 +1,5 @@
+# Sites that refuse automated link checkers. Check these by hand occasionally.
+^https?://(www\.)?(twitter|x)\.com
+^https?://([a-z]+\.)?linkedin\.com
+# The Pages site 404s until GitHub Pages is enabled for this repository; remove after enabling.
+^https://adventurous-systems\.github\.io/

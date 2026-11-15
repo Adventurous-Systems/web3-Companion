@@ -298,11 +298,11 @@ This section replaces the old "Ethereum 2" section.
   - [Units and global variables](https://docs.soliditylang.org/en/latest/units-and-global-variables.html)
   - [Variables by example](https://solidity-by-example.org/variables/)
 - Functions
-  - [Functions](https://docs.soliditylang.org/en/latest/contracts/functions.html)
+  - [Functions](https://docs.soliditylang.org/en/latest/contracts.html#functions)
   - [Functions by example](https://solidity-by-example.org/function/)
   - [Function modifiers](https://solidity-by-example.org/function-modifier/)
   - [Function selectors](https://solidity-by-example.org/function-selector/)
-  - [Custom errors](https://docs.soliditylang.org/en/latest/contracts/errors.html) - cheaper and clearer than revert strings.
+  - [Custom errors](https://docs.soliditylang.org/en/latest/contracts.html#errors) - cheaper and clearer than revert strings.
 - Storage, memory and transient storage
   - [Data locations by example](https://solidity-by-example.org/data-locations/)
   - [Storage, memory and the stack](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack)
@@ -317,7 +317,7 @@ This section replaces the old "Ethereum 2" section.
   - [Explaining the Ethereum contract ABI and EVM bytecode](https://medium.com/@eiki1212/explaining-ethereum-contract-abi-evm-bytecode-6afa6e917c3b)
   - [What is an ABI? - QuickNode](https://www.quicknode.com/guides/ethereum-development/smart-contracts/what-is-an-abi)
 - Events and logs
-  - [Events](https://docs.soliditylang.org/en/latest/contracts/events.html)
+  - [Events](https://docs.soliditylang.org/en/latest/contracts.html#events)
   - [Events by example](https://solidity-by-example.org/events/)
 - Factory contracts and deterministic deployment
   - [Contract that creates other contracts](https://solidity-by-example.org/new-contract/)
@@ -341,7 +341,7 @@ This section replaces the old "Ethereum 2" section.
   - [Interfaces](https://solidity-by-example.org/interface/)
   - [Basic example of interaction between two contracts - Ethereum StackExchange](https://ethereum.stackexchange.com/questions/1599/basic-example-of-interaction-between-2-contracts)
 - Inheritance
-  - [Inheritance - Solidity docs](https://docs.soliditylang.org/en/latest/contracts/inheritance.html)
+  - [Inheritance - Solidity docs](https://docs.soliditylang.org/en/latest/contracts.html#inheritance)
   - [Inheritance by example](https://solidity-by-example.org/inheritance/)
 - Libraries
   - [Smart contract libraries - ethereum.org](https://ethereum.org/developers/docs/smart-contracts/libraries/)
@@ -559,7 +559,7 @@ Why this companion exists. AEC projects are fragmented across many organisations
 - Papers
   - [Dounas, T., Lombardi, D. and Jabi, W. (2021) Framework for decentralised architectural design BIM and Blockchain integration. International Journal of Architectural Computing, 19(2), 157-173](https://doi.org/10.1177/1478077120963376)
   - [Dounas, T., Lombardi, D. and Jabi, W. (2019) Towards blockchains for architectural design: consensus mechanisms for collaboration in BIM. eCAADe/SIGraDi 2019](https://doi.org/10.5151/proceedings-ecaadesigradi2019_296)
-  - [Dounas, T. and Lombardi, D. (2019) Blockchain grammars: designing with DAOs. CAADRIA 2019](http://papers.cumincad.org/cgi-bin/works/paper/caadria2019_136)
+  - [Dounas, T. and Lombardi, D. (2019) Blockchain grammars: designing with DAOs. CAADRIA 2019](https://rgu-repository.worktribe.com/output/323143/blockchain-grammars-designing-with-daos)
   - [Li, J., Greenwood, D. and Kassem, M. (2019) Blockchain in the built environment and construction industry: a systematic review, conceptual models and practical use cases. Automation in Construction, 102, 288-307](https://doi.org/10.1016/j.autcon.2019.02.005)
   - [Hunhevicz, J.J. and Hall, D.M. (2020) Do you need a blockchain in construction? Use case categories and decision framework for DLT design options. Advanced Engineering Informatics, 45, 101094](https://arxiv.org/abs/2004.04626)
   - [Li, J. and Kassem, M. (2021) Applications of distributed ledger technology (DLT) and blockchain-enabled smart contracts in construction. Automation in Construction, 132, 103955](https://doi.org/10.1016/j.autcon.2021.103955)
@@ -616,7 +616,7 @@ Why this companion exists. AEC projects are fragmented across many organisations
   - [Decrypt](https://decrypt.co/)
   - [CoinDesk](https://www.coindesk.com/)
   - [Cointelegraph](https://cointelegraph.com/)
-  - [Week in Ethereum News archive (ended January 2025)](https://weekinethereumnews.com/)
+  - [Week in Ethereum News archive (ended January 2025)](https://weekinethereum.substack.com/archive)
 - Events and hackathons
   - [ETHGlobal](https://ethglobal.com/)
   - [Devcon](https://devcon.org/)
@@ -651,7 +651,7 @@ You will meet these in older tutorials. Do not start new work with them.
 | EthFiddle | Supports only old Solidity | Remix IDE |
 | SWC Registry | [Not maintained since 2020](https://github.com/SmartContractSecurity/SWC-registry) | EthTrust Security Levels |
 | ERC-777 | Removed from OpenZeppelin 5.0 | ERC-20 |
-| eth.wiki and the Ethereum GitHub wiki | [Deprecated](https://github.com/ethereum/wiki) | ethereum.org |
+| eth.wiki and the Ethereum GitHub wiki | Deprecated, repository removed | ethereum.org |
 | EthHub | No longer maintained | ethereum.org |
 | Week in Ethereum News | Ended January 2025 | EF blog, The Defiant |
 | DeFi Pulse | No longer updated | DeFiLlama |

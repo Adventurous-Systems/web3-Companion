@@ -1,0 +1,44 @@
+name: Check links
+
+on:
+  push:
+    branches: [gh-pages]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1" # every Monday, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check links with lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 403 and 429 are accepted because many publishers and CDNs block
+          # automated checkers; a removed page normally returns 404 or 410.
+          args: >-
+            --no-progress
+            --max-retries 3
+            --retry-wait-time 5
+            --timeout 30
+            --accept '100..=103,200..=299,403,429'
+            './**/*.md'
+          # Pull requests and pushes fail on broken links; the weekly run
+          # opens an issue instead so the schedule keeps running.
+          fail: ${{ github.event_name != 'schedule' }}
+          jobSummary: true
+
+      - name: Open an issue for broken links
+        if: github.event_name == 'schedule' && steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Broken links found by the weekly check
+          content-filepath: ./lychee/out.md

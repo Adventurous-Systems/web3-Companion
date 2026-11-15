@@ -1,0 +1,3 @@
+# Sites that refuse automated link checkers. Check these by hand occasionally.
+^https?://(www\.)?(twitter|x)\.com
+^https?://([a-z]+\.)?linkedin\.com
